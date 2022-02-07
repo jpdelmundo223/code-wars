@@ -8,8 +8,8 @@ class TestMethod(unittest.TestCase):
         self.assertEqual(duplicate_encode_refactored("recede"), "()()()")
         self.assertEqual(duplicate_encode("succeed"), "(())))(")
         self.assertEqual(duplicate_encode_refactored("seeds"), ")))()")
-        self.assertEqual(duplicate_encode_refactored("Warriors"), ")))()")
-        self.assertEqual(duplicate_encode_refactored("Elements"), ")))()")
+        self.assertEqual(duplicate_encode("Warriors"), "(())(()(")
+        self.assertEqual(duplicate_encode_refactored("Elements"), ")()()(((")
         
 if __name__ == "__main__":
     unittest.main()
