@@ -46,9 +46,14 @@ def solution(roman):
                     if val < roman_dict[roman[x + 1]]:
                         prev_val = val
                     else:
+                        # executes, if the above condition returns 'False'
+                        # adds the value that is being hold by it's key pair
                         res += val
                         prev_val = 0
+                    # subtract prev_val
                     res -= prev_val
+                # catches the error when that last roman character doesn't have any value to compare with it
+                # then added the last value to the result
                 except:
                     res += val
     return res
