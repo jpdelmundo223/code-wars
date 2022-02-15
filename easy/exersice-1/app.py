@@ -1,3 +1,6 @@
+# Exercise: Duplicate Encoder
+
+# Instruction: 
 """The goal of this exercise is to convert a string to a new 
 string where each character in the new string is "(" if that 
 character appears only once in the original string, or ")" if
@@ -10,7 +13,7 @@ Examples
 "Success"  =>  ")())())"
 "(( @"     =>  "))((" """
 
-# Solution 1:
+# Solution: 
 def duplicate_encode(word):
     word = word.lower()
     result = ""
@@ -21,7 +24,7 @@ def duplicate_encode(word):
             result += "("
     return result
 
-# Solution 2:
+# Refactored Solution 1: 
 def duplicate_encode_refactored(word):
     word = word.lower()
     return (''.join([")" if word.count(letter) > 1 else "(" for letter in word]))

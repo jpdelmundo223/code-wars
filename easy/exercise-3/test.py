@@ -10,9 +10,9 @@ setup and shutdown code for tests, aggregation of tests into collections, and in
 the tests from the reporting framework."""
 
 import unittest
-from app import alphabet_position_refactored
+from app import solution
 
-class TestCases(unittest.TestCase):
+class TestMethod(unittest.TestCase):
     
     def test_function(self):
         """Syntax: assertEqual(firstValue, secondValue, message)
@@ -22,23 +22,12 @@ class TestCases(unittest.TestCase):
         firstValue  variable of any type which is used in the comparison by function
         secondValue: variable of any type which is used in the comparison by function
         message: a string sentence as a message which got displayed when the test case got failed."""
-        self.assertEqual(alphabet_position_refactored("gullible"), "7 21 12 12 9 2 12 5")
-        self.assertEqual(alphabet_position_refactored("transfer"), "20 18 1 14 19 6 5 18")
-        self.assertEqual(alphabet_position_refactored("advertisement"), "1 4 22 5 18 20 9 19 5 13 5 14 20")
+        self.assertEqual(solution('IV'), 4)
+        self.assertEqual(solution('IX'), 9)
+        self.assertEqual(solution('MMLX'), 2060)
+        self.assertEqual(solution('MCMXM'), 2890)
 
-    def test_function_with_capitals(self):
-        """Syntax: assertEqual(firstValue, secondValue, message)
-
-        Parameters: assertEqual() accept three parameter which are listed below with explanation:
-
-        firstValue  variable of any type which is used in the comparison by function
-        secondValue: variable of any type which is used in the comparison by function
-        message: a string sentence as a message which got displayed when the test case got failed."""
-        self.assertEqual(alphabet_position_refactored("GULLIBLE"), "7 21 12 12 9 2 12 5")
-        self.assertEqual(alphabet_position_refactored("Transfer"), "20 18 1 14 19 6 5 18")
-        self.assertEqual(alphabet_position_refactored("ADVERTISEMENT"), "1 4 22 5 18 20 9 19 5 13 5 14 20")
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     """if __name__ == “main”: is used to execute some code only if the file was run 
     directly, and not imported.
 
@@ -51,10 +40,5 @@ if __name__ == "__main__":
     Passing the -v option to your test script will instruct unittest.main()
     to enable a higher level of verbosity, and produce a more detailed test output
      
-    run in terminal: python test.py -v is equivalent to unittest.main(verbosity=1)
-    
-    Level of verbosity: 
-        0 (quiet): you just get the total numbers of tests executed and the global result
-        1 (default): you get the same plus a dot for every successful test or a F for every failure
-        2 (verbose): you get the help string of every test and the result"""
+    run in terminal: python test.py -v is equivalent to unittest.main(verbosity=1)"""
     unittest.main(verbosity=2)

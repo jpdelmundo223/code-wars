@@ -16,6 +16,13 @@ from app import duplicate_encode_refactored
 class TestMethod(unittest.TestCase):
 
     def test_function(self):
+        """Syntax: assertEqual(firstValue, secondValue, message)
+
+        Parameters: assertEqual() accept three parameter which are listed below with explanation:
+
+        firstValue  variable of any type which is used in the comparison by function
+        secondValue: variable of any type which is used in the comparison by function
+        message: a string sentence as a message which got displayed when the test case got failed."""
         self.assertEqual(duplicate_encode("Summer"), "(())((")
         self.assertEqual(duplicate_encode_refactored("recede"), "()()()")
         self.assertEqual(duplicate_encode("succeed"), "(())))(")
