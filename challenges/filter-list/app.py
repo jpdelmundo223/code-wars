@@ -13,4 +13,7 @@ def filter_list(list):
     """Retuns a list which contains non-negative integer values"""
     # Uses list comprehension and if ternary operation 
     # for better code readability
+
+    # Uses built-in function called 'type()', which returns 
+    # the type of a object
     return [elem for elem in list if type(elem) == int]
