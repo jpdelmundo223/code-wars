@@ -44,4 +44,5 @@ if __name__ == "__main__":
     to enable a higher level of verbosity, and produce a more detailed test output
      
     run in terminal: python test.py -v is equivalent to unittest.main(verbosity=1)"""
+    
     unittest.main(verbosity=2)
